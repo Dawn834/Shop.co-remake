@@ -121,6 +121,7 @@ header .close-svg {
 header .nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 40px;
     height: 96px;
 }
@@ -425,6 +426,7 @@ header .mobile-menu-links .mobile-menu-link.popup:hover .dropdown-mobile {
 footer {
     margin-top: 150px;
     background-color: var(--bg-color);
+    padding-bottom: 80px;
 }
 
 footer .bg-color-newsletter {
