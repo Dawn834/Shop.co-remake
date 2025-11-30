@@ -10,7 +10,7 @@
 .container-sm,
 .container-xl,
 .container-xxl {
-    --bs-gutter-x: 1.5rem;
+    --bs-gutter-x: 20px;
     --bs-gutter-y: 0;
     width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
@@ -20,7 +20,6 @@
 }
 
 @media (min-width:576px) {
-
     .container,
     .container-sm {
         max-width: 540px
@@ -65,7 +64,7 @@
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1240px
+        max-width: 1260px
     }
 }
 
@@ -79,7 +78,7 @@
 }
 
 .row {
-    --bs-gutter-x: 1.5rem;
+    --bs-gutter-x: 20px;
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
