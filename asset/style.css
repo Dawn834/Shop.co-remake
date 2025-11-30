@@ -374,7 +374,7 @@ header .mobile-menu-link svg {
     display: inline-block;
 }
 
-header .mobile-menu-link:hover {
+header li:hover {
     background: #f8f9fa;
     border-left-color: #000000;
     padding-left: 30px;
