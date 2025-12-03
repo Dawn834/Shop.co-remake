@@ -282,3 +282,280 @@
     background-color: #000000;
     color: #fff;
 }
+
+/* Dress style------------------------------------- */
+.dress-style {
+    background-color: rgba(240, 240, 240, 1);
+    border-radius: 40px;
+}
+
+.dress-style .title-section {
+    padding-top: 70px;
+}
+
+.styles-flex {
+    width: 100%;
+    padding: 0 64px 76px 64px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.styles-card {
+    background-color: rgba(255, 255, 255, 1);
+    width: 60%;
+    height: 289px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.styles-card:hover {
+    transform: translateY(-8px);
+}
+
+.styles-card:first-child,
+.styles-card:last-child {
+    width: 35%;
+}
+
+.dress-style h3 {
+    font-family: var(--font-shatoshi);
+    margin: 25px 0 0 36px;
+}
+
+.style-casual {
+    background-image: url(./img/styles/e1b774aba32d9a769caba77c08e107a9198dcd.png);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: -200px center;
+}
+
+.style-formal {
+    background-image: url(./img/styles/2025-10-28.png);
+    background-repeat: no-repeat;
+    background-size: 250%;
+    background-position: -550px -300px;
+}
+
+.style-party {
+    background-image: url(./img/styles/aa19c69e82cd85a823c989c1c8631bd976e2cbfb.png);
+    background-repeat: no-repeat;
+    background-position: 50px center;
+}
+
+.style-gym {
+    background-image: url(./img/styles/fce658e0c17a220fe8bfb1126626f3ab58a761ec.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50px center;
+}
+
+@media (max-width:1200px) {
+    .style-formal {
+        background-position: 50%;
+    }
+
+}
+
+@media (max-width:992px) {
+    .styles-flex {
+        flex-direction: column;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .styles-card {
+        width: 100% !important;
+    }
+
+    .dress-style .title-section {
+        line-height: 36px;
+        padding: 40px 56px 28px 56px;
+        margin-bottom: 0;
+    }
+
+    .title-section {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:800px) {
+    .style-casual {
+        background-size: 200%;
+        background-position: center;
+    }
+
+    .style-formal {
+        background-size: 400%;
+        background-position: center;
+    }
+
+    .style-party {
+        background-size: 200%;
+        background-position: 20% center;
+    }
+
+    .style-gym {
+        background-size: 100%;
+        background-position: 100px center;
+    }
+
+}
+
+
+/* feedback css------------------------------*/
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+
+.navigation-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: relative;
+    width: fit-content;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.3);
+}
+
+.feedback-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    overflow: auto;
+}
+
+.feedback-card {
+    width: 400px;
+    min-height: 240px;
+    padding: 28px 32px;
+    border: 1px rgba(0, 0, 0, 0.1) solid;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.feedback-card .stars {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 5px;
+}
+
+.feedback-card .customer-info {
+    display: flex;
+    align-items: center;
+}
+
+.feedback-card .customer-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+/* .feedback-card .verified-badge {
+    width: 24px;
+    height: 24px;
+    background-color: #10B981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+} */
+
+.feedback-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.feedback-container {
+    position: relative;
+}
+
+/* Làm mờ bên TRÁI */
+.feedback-container::before {
+    content: '';
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100px;
+    height: 50%;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Làm mờ bên PHẢI */
+.feedback-container::after {
+    content: '';
+    position: absolute;
+    top: 200px;
+    right: 0;
+    width: 100px;
+    height: 50%;
+    background: linear-gradient(270deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+@media (max-width:1000px) {
+
+    .feedback-container::after,
+    .feedback-container::before {
+        all: unset;
+    }
+}
+
+@media (max-width:800px) {
+    .feedback-header {
+        align-items: flex-end;
+    }
+
+    .feedback-header h2 {
+        font-size: 32px;
+        line-height: 36px;
+        max-width: 80%;
+    }
+
+    .feedback-flex {
+        padding: 0 20px;
+    }
+
+    .feedback-card {
+        min-width: 95%;
+    }
+}
