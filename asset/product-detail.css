@@ -27,10 +27,11 @@
 }
 
 /* Thumbnails-------------------------------------------  */
-.product-grid{
+.product-grid {
     display: flex;
     justify-content: space-between;
 }
+
 .product-image {
     display: flex;
     justify-content: space-between;
@@ -195,11 +196,16 @@
     background-color: #2d3e50;
 }
 
+.size-container {
+    gap: 12px;
+}
+
 .size-option {
     background: #f8f9fa;
     transition: all 0.3s;
     height: 46px;
     color: rgba(0, 0, 0, 0.6);
+    padding: 12px 24px;
 }
 
 .size-option:hover {
@@ -258,9 +264,10 @@
 }
 
 @media (max-width:1400px) {
-    .product-image{
+    .product-image {
         flex-direction: column;
     }
+
     .thumbnail-list {
         flex-direction: row;
         overflow-x: auto;
@@ -269,6 +276,7 @@
         margin: 20px 0;
         order: 1;
     }
+
     .thumbnail {
         max-width: 111px;
     }
@@ -288,19 +296,23 @@
 }
 
 @media (max-width: 768px) {
-    .product-grid{
+    .product-grid {
         flex-direction: column;
         align-items: center;
     }
-    .product-option{
+
+    .product-option {
         padding: 0;
     }
+
     .product-title {
         font-size: 1.8rem;
     }
-    .thumbnail-list{
+
+    .thumbnail-list {
         height: 110px;
     }
+
     .thumbnail {
         min-width: 100px;
         max-height: 106px;
@@ -310,11 +322,324 @@
         height: 100%;
         object-fit: cover;
     }
-    .quantity-control{
+
+    .quantity-control {
         max-width: 110px;
+        height: 44px;
     }
-    .add-to-cart-btn{
+
+    .add-to-cart-btn {
         max-width: 236px;
+        height: 44px;
     }
-    
+
+    .size-container {
+        gap: 8px;
+    }
+
+    .size-option {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Review section css---------------------------------- */
+.nav-tabs {
+    justify-content: center;
+    display: flex;
+    list-style: none;
+}
+
+.nav-tabs .nav-tab {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: #999;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 24px 0;
+}
+
+.nav-tabs .nav-link:hover {
+    border: none;
+    color: #333;
+}
+
+.nav-tabs .nav-tab.active {
+    font-weight: 500;
+    background: transparent;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+.nav-tabs .nav-tab.active .nav-link {
+    color: #000;
+}
+
+
+#product-detail,
+#FAQs {
+    display: none;
+    transition: all 1s ease;
+}
+
+.reviews-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviews-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.reviews-count {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.reviews-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter-btn {
+    width: 48px;
+    height: 48px;
+    background: rgba(240, 240, 240, 1);
+    border: none;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.dropbtn1 {
+    background-color: rgba(240, 240, 240, 1);
+    max-width: 120px;
+    width: 100%;
+    border: none;
+}
+
+.dropbtn1 svg {
+    display: inline-block;
+}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    min-width: 160px;
+    border-radius: 15px;
+    z-index: 1000;
+    list-style: none;
+    top: 50px;
+    left: -20px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content1 a {
+    border-radius: 15px;
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+
+}
+
+.dropdown-content1 a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.show {
+    display: block;
+}
+
+.accordion-header {
+    font-weight: 700;
+}
+
+.write-review-btn {
+    width: 166px;
+    border: none;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+.write-review-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+@media (max-width:992px) {
+    .nav-tabs .nav-link {
+        font-size: 16px;
+    }
+
+}
+
+.review-cards {
+    margin-bottom: 20px;
+}
+
+.review-card {
+    height: 100%;
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+    padding: 28px 2rem;
+    position: relative;
+    transition: all 0.3s;
+    flex-grow: 1;
+}
+
+.review-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.review-stars {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 6px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 1rem;
+}
+
+.reviewer-info svg {
+    width: 24px;
+    height: 24px;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.review-text {
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 22px;
+    margin-bottom: 24px;
+}
+
+.review-date {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.more-options {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.more-options:hover {
+    color: #333;
+}
+
+.load-more-btn {
+    max-width: 230px;
+    width: 100%;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s;
+    display: block;
+    margin: 13px auto;
+}
+
+.load-more-btn:hover {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .reviews-count {
+        font-size: 14px;
+    }
+
+    .reviews-title {
+        font-size: 20px;
+        line-height: 100%;
+    }
+
+    .filter-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .write-review-btn {
+        max-width: 113px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 100%;
+    }
+    .nav-tabs .nav-tab{
+        justify-content: flex-start;
+    }
+    .nav-tabs .nav-link {
+        padding: 20px 0;
+    }
+
+    .dropdown1 {
+        display: none;
+    }
+    .review-cards{
+        margin-bottom: 15px;
+    }
+    .review-card {
+        padding: 24px;
+    }
+
+    .reviewer-info {
+        margin-bottom: 8px;
+    }
+
+    .reviewer-name {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .review-text {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 1rem;
+    }
+    .load-more-btn{
+        margin: 5px auto;
+    }
 }
