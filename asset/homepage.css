@@ -30,6 +30,11 @@
     align-items: center;
     border-radius: 62px;
     margin-bottom: 48px;
+    transition: all 0.3s;
+}
+
+.slider-content .btn-d:hover {
+    transform: translateY(-2px);
 }
 
 .slider-content .achievement {
@@ -131,7 +136,15 @@
     }
 
 }
-
+@media (max-width:522px) {
+    .slider-content .achievement:nth-child(2){
+        border: none;
+    }
+    .slider-content h1{
+        line-height: 34px !important;
+    }
+    
+}
 @media (max-width:450px) {
     .slider-img img {
         transform: translateY(-50%) scale(1.4);
@@ -154,10 +167,36 @@
     height: 130px;
 }
 
-.brands .brand-logo {
+/* .brands .brand-logo {
     display: inline-flex;
     justify-content: center;
+    
+} */
+ @media (max-width:991px) {
+    .brands-logo{
+        justify-content: center;
+        gap: 30px;
+        padding: 38px 0;
+        height: fit-content;
+    }
+    
+ }
+@media (max-width:768px) {
+    .brands-logo{
+        gap: 20px;
+    }
+    
 }
+@media (max-width:530px) {
+    .brands .brand-logo{
+        max-width: 120px;
+    }
+    .brand-logo:nth-child(2){
+        max-width: 70px;
+    }
+    
+}
+
 
 /* Product CSS------------------------------------------------- */
 .product-container {
@@ -170,7 +209,15 @@
     text-align: center;
 }
 
-.swiper-wrapper {
+.product-swiper{
+    position: relative;
+}
+.product-swiper .swiper-button-next{
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.product-container .swiper-wrapper {
     justify-content: space-between;
 }
 
@@ -297,7 +344,7 @@
     width: 100%;
     padding: 0 64px 76px 64px;
     display: flex;
-    justify-content: space-around;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -308,7 +355,6 @@
     overflow: hidden;
     position: relative;
     border-radius: 20px;
-    margin-bottom: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -415,21 +461,23 @@
     padding-top: 80px;
     padding-bottom: 40px;
 }
-
+.feedback-section{
+    margin-bottom: 70px;
+}
 
 .navigation-buttons {
     display: flex;
     gap: 16px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.feedback-header .swiper-button-next,
+.feedback-header .swiper-button-prev {
     position: relative;
     width: fit-content;
 }
 
-.swiper-button-next svg,
-.swiper-button-prev svg {
+.feedback-header .swiper-button-next svg,
+.feedback-header .swiper-button-prev svg {
     width: 24px;
     height: 24px;
 }
