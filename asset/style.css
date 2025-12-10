@@ -233,7 +233,7 @@ header .nav-user svg {
 
 header .search-box-popup {
     position: absolute;
-    top: 70%;
+    top: 80%;
     right: 50%;
     visibility: hidden;
     transform: translateX(50%);
